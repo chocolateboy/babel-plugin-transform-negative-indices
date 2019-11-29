@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Turn negative array indices into offsets from the end of the array.",
   "repository": "https://github.com/danrouse/babel-plugin-transform-negative-indices",
+  "author": "Dan Rouse <dan@rouse.house>",
   "license": "MIT",
-  "main": "src/index.js",
+  "main": "index.js",
+  "files": [],
   "keywords": [
     "babel-plugin"
   ],
