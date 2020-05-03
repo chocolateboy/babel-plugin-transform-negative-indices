@@ -9,14 +9,16 @@
 - [INSTALLATION](#installation)
 - [SYNOPSIS](#synopsis)
 - [DESCRIPTION](#description)
-  - [USAGE](#usage)
-    - [.babelrc](#babelrc)
-    - [CLI](#cli)
-    - [API](#api)
+- [USAGE](#usage)
+  - [.babelrc](#babelrc)
+  - [CLI](#cli)
+  - [API](#api)
 - [DEVELOPMENT](#development)
   - [NPM Scripts](#npm-scripts)
 - [COMPATIBILITY](#compatibility)
 - [SEE ALSO](#see-also)
+  - [Babel Plugins](#babel-plugins)
+  - [Other](#other)
 - [VERSION](#version)
 - [AUTHOR](#author)
 - [COPYRIGHT AND LICENSE](#copyright-and-license)
@@ -60,9 +62,9 @@ This is a [Babel](https://www.npmjs.com/package/babel)
 array indices into offsets from the end of the array, e.g. `array[-1]` becomes
 `array[array.length - 1]`.
 
-## USAGE
+# USAGE
 
-### .babelrc
+## .babelrc
 
 `$ cat .babelrc`
 
@@ -72,13 +74,13 @@ array indices into offsets from the end of the array, e.g. `array[-1]` becomes
 }
 ```
 
-### CLI
+## CLI
 
 ```sh
 $ babel --plugins transform-negative-indices script.js
 ```
 
-### API
+## API
 
 ```javascript
 require('babel-core').transform('code', {
@@ -109,8 +111,14 @@ The following NPM scripts are available:
 
 # SEE ALSO
 
+## Babel Plugins
+
+- <s>[babel-plugin-negative-array-indices](https://www.npmjs.com/package/babel-plugin-negative-array-indices)</s> - doesn't install / unmaintained
 - [babel-plugin-array-last-index](https://www.npmjs.com/package/babel-plugin-array-last-index)
-- [negative-array](https://github.com/sindresorhus/negative-array) - negative array index support using ES6 Proxies
+
+## Other
+
+- [negative-array](https://www.npmjs.com/package/negative-array) - ES6 Proxy wrapper
 
 # VERSION
 
