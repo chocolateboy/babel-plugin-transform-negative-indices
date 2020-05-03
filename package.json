@@ -11,7 +11,7 @@
         "build": "cross-env NODE_ENV=production bili --no-map --format cjs,esm -d dist src/index.js",
         "clean": "shx rm -rf dist",
         "doctoc": "markdown-toc --bullets=- -i README.md",
-        "prepublishOnly": "run-s clean test",
+        "prepublishOnly": "run-s clean doctoc test",
         "rebuild": "run-s clean build",
         "test": "run-s build test:unit",
         "test:unit": "ava --verbose ./test/index.js"

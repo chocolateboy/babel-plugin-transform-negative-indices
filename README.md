@@ -64,6 +64,8 @@ array indices into offsets from the end of the array, e.g. `array[-1]` becomes
 
 # USAGE
 
+<details>
+
 ## .babelrc
 
 `$ cat .babelrc`
@@ -87,6 +89,8 @@ require('babel-core').transform('code', {
     plugins: ['transform-negative-indices']
 })
 ```
+
+</details>
 
 # DEVELOPMENT
 
