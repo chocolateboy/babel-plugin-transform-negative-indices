@@ -1,8 +1,8 @@
-export default function({ types: t }) {
+export default function ({ types: t }) {
     return {
         visitor: {
             MemberExpression: {
-                enter({ node }) {
+                enter ({ node }) {
                     const prop = node.property
 
                     if (

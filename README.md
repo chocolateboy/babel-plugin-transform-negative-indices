@@ -111,7 +111,8 @@ The following NPM scripts are available:
 
 # COMPATIBILITY
 
-- [Maintained node versions](https://nodejs.org/en/about/releases/)
+- Babel 6+ (only Babel 7+ is tested/supported)
+- [Maintained node versions](https://github.com/nodejs/Release#release-schedule)
 
 # SEE ALSO
 
@@ -130,7 +131,7 @@ The following NPM scripts are available:
 
 # AUTHOR
 
-- [Dan Rouse](https://github.com/danrouse) - original version
+- [Dan Rouse](https://github.com/danrouse)
 - [chocolateboy](mailto:chocolate@cpan.org) - maintainer
 
 # COPYRIGHT AND LICENSE
