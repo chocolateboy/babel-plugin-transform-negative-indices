@@ -1,23 +1,31 @@
-import path from 'path';
-import fs from 'fs';
-import assert from 'assert';
-import { transformFileSync } from 'babel-core';
-import plugin from '../src';
+const test          = require('ava')
+const Fs            = require('fs')
+const Path          = require('path')
+const Prettier      = require('prettier')
+const { transform } = require('@babel/core')
 
-function trim(str) {
-  return str.replace(/^\s+|\s+$/, '');
+const fixtures = Path.join(__dirname, 'fixtures')
+const pluginPath = Path.resolve(__dirname, '..')
+
+function normalize (src) {
+    return Prettier.format(src.trim(), { parser: 'babel' })
 }
 
-describe('babel transform plugin', () => {
-  for(let testName of fs.readdirSync(path.join(__dirname, 'fixtures'))) {
-    it(`should transform ${testName}`, () => {
-      const testDir = path.join(__dirname, 'fixtures', testName);
-      const actual = transformFileSync(path.join(testDir, 'actual.js'), {
-        plugins: [plugin]
-      }).code;
-      const expected = fs.readFileSync(path.join(testDir, 'expected.js')).toString();
-      assert.equal(trim(actual), trim(expected));
-    });
-  }
-  
-});
+for (const filename of Fs.readdirSync(fixtures)) {
+    const name = Path.basename(filename)
+    const path = Path.resolve(fixtures, filename)
+
+    test(name, t => {
+        const input = Fs.readFileSync(path, 'utf8')
+
+        const { code: transpiled } = transform(input, {
+            plugins: [pluginPath],
+            babelrc: false,
+            comments: false,
+        })
+
+        const got = normalize(transpiled)
+
+        t.snapshot(got, name)
+    })
+}
