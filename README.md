@@ -110,7 +110,7 @@ The following NPM scripts are available:
 # SEE ALSO
 
 - [babel-plugin-array-last-index](https://www.npmjs.com/package/babel-plugin-array-last-index)
-- [babel-plugin-negative-array-indices](https://www.npmjs.com/package/babel-plugin-negative-array-indices)
+- [negative-array](https://github.com/sindresorhus/negative-array) - negative array index support using ES6 Proxies
 
 # VERSION
 
