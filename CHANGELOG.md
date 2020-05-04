@@ -1,3 +1,7 @@
+**1.0.2** - 2020-05-04
+
+- documentation fix
+
 **1.0.1** - 2020-05-04
 
 - documentation tweaks

@@ -127,7 +127,7 @@ The following NPM scripts are available:
 
 # VERSION
 
-1.0.1
+1.0.2
 
 # AUTHOR
 
