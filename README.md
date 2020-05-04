@@ -57,8 +57,8 @@ array[array.length - 2] = 42
 
 # DESCRIPTION
 
-This is a [Babel](https://www.npmjs.com/package/babel)
-[plugin](https://babeljs.io/docs/advanced/plugins/) which transforms negative
+This is a [Babel](https://babeljs.io/)
+[plugin](https://babeljs.io/docs/plugins/) which transforms negative
 array indices into offsets from the end of the array, e.g. `array[-1]` becomes
 `array[array.length - 1]`.
 
@@ -85,7 +85,7 @@ $ babel --plugins transform-negative-indices script.js
 ## API
 
 ```javascript
-require('babel-core').transform('code', {
+require('babel-core').transform(code, {
     plugins: ['transform-negative-indices']
 })
 ```
@@ -127,7 +127,7 @@ The following NPM scripts are available:
 
 # VERSION
 
-1.0.0
+1.0.1
 
 # AUTHOR
 

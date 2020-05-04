@@ -1,6 +1,6 @@
 {
     "name": "babel-plugin-transform-negative-indices",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Turn negative array indices into offsets from the end of the array",
     "repository": "https://github.com/chocolateboy/babel-plugin-transform-negative-indices",
     "author": "Dan Rouse <dan@rouse.house>",
@@ -33,6 +33,8 @@
     "keywords": [
         "array",
         "array-element",
+        "array-index",
+        "array-indices",
         "babel-plugin",
         "last-element",
         "last-index",
