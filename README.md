@@ -85,7 +85,7 @@ $ babel --plugins transform-negative-indices script.js
 ## API
 
 ```javascript
-require('babel-core').transform(code, {
+require('@babel/core').transform(code, {
     plugins: ['transform-negative-indices']
 })
 ```
