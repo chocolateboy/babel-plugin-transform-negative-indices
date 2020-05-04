@@ -46,7 +46,7 @@ const foo = array[-1]
 array[-2] = 42
 ```
 
-`$ babel --plugins transform-negative-indices`
+`$ babel --plugins transform-negative-indices test.js`
 
 ```javascript
 const array = [1, 2, 3]
